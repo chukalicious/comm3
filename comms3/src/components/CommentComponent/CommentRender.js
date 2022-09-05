@@ -1,3 +1,6 @@
+import iconminus from "../../interactive-comments-section-main/images/iconminus.svg";
+import iconplus from "../../interactive-comments-section-main/images/iconplus.svg";
+
 import { useState } from "react";
 
 const CommentRender = (props) => {
@@ -35,9 +38,14 @@ const CommentRender = (props) => {
       </div>
       <div>
         <div>
-          <button onClick={handleUpVote}>plus</button>
+          <button onClick={handleUpVote}>
+            {" "}
+            <img src={iconplus} alt="upvote" />
+          </button>
           {score}
-          <button onClick={handleDownVote}>minus</button>
+          <button onClick={handleDownVote}>
+            <img src={iconminus} alt="downvote" />
+          </button>
         </div>
         <button>Reply</button>
       </div>
@@ -52,15 +60,21 @@ const CommentRender = (props) => {
                   <h2>{reply.createdAt}</h2>
                 </div>
                 <div>
-                  <p>{reply.content}</p>
+                  <p>
+                    <span>{reply.replyingTo}</span> {reply.content}
+                  </p>
                 </div>
                 <div>
                   <div>
-                    <button>plus</button>
+                    <button>
+                      <img src={iconplus} alt="upvote" />{" "}
+                    </button>
                     {reply.score}
                     <button>minus</button>
                   </div>
-                  <button>Reply</button>
+                  <button>
+                    <img src={iconminus} alt="downvote" />{" "}
+                  </button>
                 </div>
               </div>
             ))}{" "}
