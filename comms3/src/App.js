@@ -2,7 +2,7 @@ import Comment from "./components/CommentComponent";
 
 function App() {
   return (
-    <div>
+    <div className="box-border">
       <Comment />{" "}
     </div>
   );

@@ -13,7 +13,7 @@ const Comment = () => {
     setCommentsData(projectData.comments);
   }, []);
   return (
-    <div>
+    <div className="w-full">
       {comments.map((comm, i) => (
         <CommentRender key={i} commentsData={comm} />
       ))}{" "}
