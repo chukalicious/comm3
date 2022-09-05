@@ -27,7 +27,7 @@ const FormRender = (props) => {
         ></textarea>
         <div className="flex justify-between mt-4">
           <img alt="me" src={user.image} className="p-3 w-16 h-16" />{" "}
-          <button className="uppercase tracking-wider py-1 px-1 rounded-xl text-white text-2xl w-[25%] text-center bg-[#5E5DA7] ">
+          <button className="uppercase tracking-wider py-1 px-5 rounded-xl text-white text-xl min-w-[25%] text-center bg-[#5E5DA7] ">
             Send
           </button>
         </div>
