@@ -20,6 +20,7 @@ const CommentRender = (props) => {
       return score - 1;
     });
   };
+
   /////////////// END OF COUNTER
 
   return (
@@ -40,6 +41,32 @@ const CommentRender = (props) => {
         </div>
         <button>Reply</button>
       </div>
+      <div>
+        {props.commentsData.replies.length > 0 ? (
+          <div>
+            {props.commentsData.replies.map((reply, i) => (
+              <div key={i + 10}>
+                <div>
+                  <img alt="user avatar" src={reply.user.image} />{" "}
+                  <h1>{reply.user.username}</h1>
+                  <h2>{reply.createdAt}</h2>
+                </div>
+                <div>
+                  <p>{reply.content}</p>
+                </div>
+                <div>
+                  <div>
+                    <button>plus</button>
+                    {reply.score}
+                    <button>minus</button>
+                  </div>
+                  <button>Reply</button>
+                </div>
+              </div>
+            ))}{" "}
+          </div>
+        ) : null}
+      </div>{" "}
     </div>
   );
 };
