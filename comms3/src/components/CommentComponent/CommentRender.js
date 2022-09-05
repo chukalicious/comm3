@@ -1,4 +1,5 @@
-const CommentRender = () => {
+const CommentRender = (props) => {
+  console.log("ComentRender: props: ", props);
   return (
     <div>
       <div>
