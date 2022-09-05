@@ -13,10 +13,11 @@ const Comment = () => {
     setCommentsData(projectData.comments);
   }, []);
   return (
-    <>
-      Logic
-      <CommentRender userData={userData} commentsData={comments} />{" "}
-    </>
+    <div>
+      {comments.map((comm, i) => (
+        <CommentRender key={i} commentsData={comm} />
+      ))}{" "}
+    </div>
   );
 };
 
