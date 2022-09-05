@@ -1,9 +1,6 @@
 export const data = {
   currentUser: {
-    image: {
-      png: "./images/avatars/image-juliusomo.png",
-      webp: "./images/avatars/image-juliusomo.webp",
-    },
+    image: "https://live.staticflickr.com/65535/52335469763_f8ae5a825b_o.png",
     username: "juliusomo",
   },
   comments: [
@@ -14,10 +11,8 @@ export const data = {
       createdAt: "1 month ago",
       score: 12,
       user: {
-        image: {
-          png: "./images/avatars/image-amyrobson.png",
-          webp: "./images/avatars/image-amyrobson.webp",
-        },
+        image:
+          "https://live.staticflickr.com/65535/52335659585_df6e4c17c3_o.png",
         username: "amyrobson",
       },
       replies: [],
@@ -29,10 +24,8 @@ export const data = {
       createdAt: "2 weeks ago",
       score: 5,
       user: {
-        image: {
-          png: "./images/avatars/image-maxblagun.png",
-          webp: "./images/avatars/image-maxblagun.webp",
-        },
+        image:
+          "https://live.staticflickr.com/65535/52334274907_3c3fb55da7_o.png",
         username: "maxblagun",
       },
       replies: [
@@ -44,10 +37,8 @@ export const data = {
           score: 4,
           replyingTo: "maxblagun",
           user: {
-            image: {
-              png: "./images/avatars/image-ramsesmiron.png",
-              webp: "./images/avatars/image-ramsesmiron.webp",
-            },
+            image:
+              "https://live.staticflickr.com/65535/52335469743_2a48444ba3_o.png",
             username: "ramsesmiron",
           },
         },
@@ -59,10 +50,8 @@ export const data = {
           score: 2,
           replyingTo: "ramsesmiron",
           user: {
-            image: {
-              png: "./images/avatars/image-juliusomo.png",
-              webp: "./images/avatars/image-juliusomo.webp",
-            },
+            image:
+              "https://live.staticflickr.com/65535/52335469763_f8ae5a825b_o.png",
             username: "juliusomo",
           },
         },
