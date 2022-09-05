@@ -1,6 +1,7 @@
 import iconminus from "../../interactive-comments-section-main/images/iconminus.svg";
 import iconplus from "../../interactive-comments-section-main/images/iconplus.svg";
 import iconreply from "../../interactive-comments-section-main/images/iconreply.svg";
+import Form from "../FormComponents";
 
 import { useState } from "react";
 
@@ -27,6 +28,14 @@ const CommentRender = (props) => {
 
   /////////////// END OF COUNTER
 
+  const [activeState, setActiveState] = useState(false);
+  console.log("CommentRender: activeState:", activeState);
+
+  const handleActiveState = (e) => {
+    e.stopPropagation();
+    setActiveState(!activeState);
+  };
+
   return (
     <div className="my-5 mx-5 bg-[#fff] rounded-lg py-4">
       <div className="flex w-full justify-items-center ">
@@ -46,7 +55,7 @@ const CommentRender = (props) => {
         <p>{props.commentsData.content}</p>
       </div>
       <div className="px-4 flex w-full justify-between">
-        <div className="flex rounded-lg font-semibold text-[#5E5DA7] ">
+        <div className="flex rounded-lg font-semibold text-[#5E5DA7] bg-[#f5f6fa] ">
           <button className="p-2" onClick={handleUpVote}>
             {" "}
             <img src={iconplus} alt="upvote" />
@@ -56,10 +65,14 @@ const CommentRender = (props) => {
             <img src={iconminus} alt="downvote" />
           </button>
         </div>
-        <button className="font-semibold inline-flex text-[#5E5DA7]">
+        <button
+          onClick={handleActiveState}
+          className="font-semibold inline-flex text-[#5E5DA7]"
+        >
           <img className="my-2 pr-2" src={iconreply} alt="reply" /> Reply{" "}
         </button>
       </div>
+      {activeState && <Form setActiveState={setActiveState} />}
       <div className="w-full flex ml-8 ">
         {props.commentsData.replies.length > 0 ? (
           <div
